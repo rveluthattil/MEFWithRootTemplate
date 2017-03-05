@@ -1,0 +1,20 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "../../../../Views/Shared/_Layout.cshtml";
+}
+
+@section SideBar
+{
+    <ul>
+        <li>Item 1 from View1</li>
+        <li>Item 2 from View1</li>
+        <li>Item 3 from View1</li>
+    </ul>
+}
+<h2>Index</h2>
+@using (Html.BeginForm("DisplayAction", "PluginA_1"))
+{
+    <input id="TestButton" type="Submit" value="TestButton" />
+}

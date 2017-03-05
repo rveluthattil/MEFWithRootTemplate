@@ -1,0 +1,51 @@
+﻿@model MEFWithRootTemplatePlugin1.Models.VModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VINNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleMake)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleYear)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.VINNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.VehicleMake)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.VehicleModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.VehicleYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+
+
+</table>
